@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webshop-9c79c": {
+      "hosting": {
+        "webshop": [
+          "webshop-9c79c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "webshop-9c79c"
+  }
+}

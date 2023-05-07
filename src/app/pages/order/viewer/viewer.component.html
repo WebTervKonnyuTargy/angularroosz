@@ -1,0 +1,32 @@
+<div class="div-card" *ngIf="imageInput">
+    <mat-card fxLayout fxLayoutGap="20px">
+        <span fxFlex="1 1 50%">
+            <mat-card-header>
+            </mat-card-header>
+
+            <mat-card-content>
+                <img class="orderImage" [src]="loadedImage" />
+                <mat-card-title>{{imageInput.leiras}}</mat-card-title>
+            
+            </mat-card-content>
+        </span>
+        <span fxFlex="1 1 50%">
+            <mat-card-actions>
+                <div class="ar">{{imageInput.ar}} FT</div>
+                <form [formGroup]="orderForm" (ngSubmit)="addComment()">
+                    <div>
+                        <mat-form-field>
+                            <mat-label for="mennyiseg">Mennyiség: </mat-label>
+                            <input matInput type="number" formControlName="mennyiseg" />
+                        </mat-form-field>
+                    </div>
+                    <div class="break"></div>
+                    <div>
+                        <button mat-raised-button color="warn" type="submit">Kosárba rakás</button>
+                    </div>
+                </form>
+            </mat-card-actions>
+        </span>
+
+    </mat-card>
+</div>
